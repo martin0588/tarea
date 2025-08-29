@@ -3,20 +3,25 @@ body {
   background-color: hsl(225, 87%, 38%);
   background-image: url("images/pattern-background-mobile.svg");
   background-repeat: no-repeat;
-  background-size: cover;           /* cubre toda la pantalla */
+  background-size: cover;           
   background-position: top center;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  padding: 15px;                    /* margen interno para no pegar la card a los bordes */
+  padding: 15px;
+
+  /* 👇 fuerza el ancho de "pantalla móvil" */
+  width: 375px;          
+  margin: 0 auto;        /* centra la vista simulada en tu laptop */
+  border: 1px solid #ccc; /* opcional, para ver los bordes del "celular" */
 }
 
 .card {
   background: white;
-  width: 100%;                      /* ocupar todo el ancho del celular */
-  max-width: 375px;                 /* límite por si hay pantallas un poco más grandes */
+  width: 100%;                      
+  max-width: 375px;                 
   border-radius: 15px;
   box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
   overflow: hidden;
@@ -29,7 +34,7 @@ body {
 }
 
 h1 {
-  font-size: 1.2rem;                /* más compacto en mobile */
+  font-size: 1.2rem;
   margin: 15px 0 8px;
 }
 
